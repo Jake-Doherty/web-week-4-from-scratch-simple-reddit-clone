@@ -1,11 +1,11 @@
 :root {
-    --background: rgb(224, 234, 247);
-    --header-background: white;
-    --text-color: rgb(7, 5, 68);
-    --label-color: rgb(75, 102, 98);
+    --background: linear-gradient(45deg, rgb(47, 47, 83), rgb(18, 18, 53));
+    --header-background: rgb(62, 84, 133);
+    --text-color: rgb(162, 162, 209);
+    --label-color: rgb(75, 78, 102);
     --placeholder-color: rgb(136, 136, 153);
-    --offset-color: rgb(217, 236, 217);
-    --action-color: rgb(77, 132, 252);
+    --offset-color: linear-gradient(-45deg, rgb(83, 83, 143), rgb(39, 39, 70));
+    --action-color: rgb(17, 30, 58);
 
     --primary-font: 'Rubik', Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans',
         'DejaVu Sans', 'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref', sans-serif;
@@ -47,6 +47,14 @@ body {
 .page-header nav {
     display: flex;
     gap: 10px;
+}
+
+.page-header a {
+    color: var(--text-color);
+}
+
+.page-header a:hover {
+    color: var(--action-color);
 }
 
 main {
