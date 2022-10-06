@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+        <!-- title and favicon -->
+        <title>Definition</title>
+        <link rel="icon" type="image/x-icon" href="/assets/alchemy-favicon.png" />
+
+        <!-- js -->
+        <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+        <script type="module" src="/definition/definition.js"></script>
+
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap"
+        />
+
+        <!-- css -->
+        <link rel="stylesheet" href="/styles/reset.css" />
+        <link rel="stylesheet" href="/styles/global.css" />
+        <!-- add link for page specific css -->
+        <link rel="stylesheet" href="/definition/definition.css" />
+    </head>
+
+    <body>
+        <header class="page-header">
+            <img class="logo" src="/assets/dictionary.png" alt="logo" />
+            <p class="title">Definition Detail</p>
+            <nav>
+                <a href="/index.html">Definitions</a>
+                <a href="/definition-editor/index.html">Add Definition</a>
+                <a id="sign-out-link" href="auth">Sign Out</a>
+            </nav>
+        </header>
+
+        <main>
+            <section id="post-section">
+                <div id="post-details">
+                    <h2 id="post-title">Post Title</h2>
+                    <p id="category-display">JS</p>
+                    <p id="post-description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, aut
+                        exercitationem dolore distinctio accusantium adipisci numquam optio, ex
+                        explicabo ullam beatae! A incidunt laboriosam praesentium amet accusantium.
+                        Sunt, at rem! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+                        expedita, vitae totam provident quisquam numquam laudantium dolorum
+                        obcaecati similique! Officia, reprehenderit molestias. Vel, quos enim.
+                        Nesciunt eius tenetur deleniti veniam? Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit. Voluptatem velit quia, fugiat obcaecati quas
+                        amet itaque minima quisquam, cupiditate quam laboriosam modi architecto
+                        pariatur alias non perspiciatis necessitatibus aliquam illum. Lorem ipsum
+                        dolor sit amet consectetur adipisicing elit. Veniam vel quae beatae
+                        cupiditate aliquam quisquam, nam fugit accusantium. Dolore distinctio
+                        mollitia perspiciatis, blanditiis natus necessitatibus ad dolorem ex laborum
+                        magni! Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+                        consequatur, odio quasi culpa id debitis consectetur minima sunt explicabo
+                        unde facere aut amet quisquam, laborum mollitia totam adipisci architecto
+                        ex? Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+                        consequatur, odio quasi culpa id debitis consectetur minima sunt explicabo
+                        unde facere aut amet quisquam, laborum mollitia totam adipisci architecto
+                        ex? Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+                        consequatur, odio quasi culpa id debitis consectetur minima sunt explicabo
+                        unde facere aut amet quisquam, laborum mollitia totam adipisci architecto
+                        ex?
+                    </p>
+                </div>
+                <div id="post-image">
+                    <img src="/assets/placeholder-image.png" alt="placeholder-image" />
+                </div>
+            </section>
+            <section id="comment-section">
+                <form id="comment-input">
+                    <textarea
+                        name="comment-textarea"
+                        id="comment-textarea"
+                        cols="30"
+                        rows="4"
+                        placeholder="What are your thoughts?"
+                    ></textarea>
+                    <button>Add Comment</button>
+                </form>
+                <div id="comment-view">
+                    <ul id="comment-list">
+                        <li class="comment">
+                            <p class="comment-body">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+                                consequatur, odio quasi culpa id debitis consectetur minima sunt
+                                explicabo unde facere aut amet quisquam, laborum mollitia totam
+                                adipisci architecto ex? Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Consequuntur voluptates iusto alias, quibusdam,
+                                maxime dolorem vitae ex incidunt numquam non modi laboriosam
+                                expedita voluptatibus repellat ab. Amet, distinctio! Eos, officia?
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
+                                voluptates velit quos. Laudantium iste accusamus maiores harum!
+                                Dolorem, dignissimos. Exercitationem, deleniti? Odit consequatur ea
+                                earum labore enim ad hic ut!
+                            </p>
+                            <span class="timestamp">4-20-69 4:20:06:90AM</span>
+                        </li>
+                        <li class="comment">
+                            <p class="comment-body">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+                                consequatur, odio quasi culpa id debitis consectetur minima sunt
+                                explicabo unde facere aut amet quisquam, laborum mollitia totam
+                                adipisci architecto ex?
+                            </p>
+                            <span class="timestamp">4-20-69 4:20:06:90AM</span>
+                        </li>
+                        <li class="comment">
+                            <p class="comment-body">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+                                consequatur, odio quasi culpa id debitis consectetur minima sunt
+                                explicabo unde facere aut amet quisquam, laborum mollitia totam
+                                adipisci architecto ex?
+                            </p>
+                            <span class="timestamp">4-20-69 4:20:06:90AM</span>
+                        </li>
+                        <li class="comment">
+                            <p class="comment-body">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+                                consequatur, odio quasi culpa id debitis consectetur minima sunt
+                                explicabo unde facere aut amet quisquam, laborum mollitia totam
+                                adipisci architecto ex?
+                            </p>
+                            <span class="timestamp">4-20-69 4:20:06:90AM</span>
+                        </li>
+                        <li class="comment">
+                            <p class="comment-body">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+                                consequatur, odio quasi culpa id debitis consectetur minima sunt
+                                explicabo unde facere aut amet quisquam, laborum mollitia totam
+                                adipisci architecto ex?
+                            </p>
+                            <span class="timestamp">4-20-69 4:20:06:90AM</span>
+                        </li>
+                        <li class="comment">
+                            <p class="comment-body">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+                                consequatur, odio quasi culpa id debitis consectetur minima sunt
+                                explicabo unde facere aut amet quisquam, laborum mollitia totam
+                                adipisci architecto ex?
+                            </p>
+                            <span class="timestamp">4-20-69 4:20:06:90AM</span>
+                        </li>
+                        <li class="comment">
+                            <p class="comment-body">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+                                consequatur, odio quasi culpa id debitis consectetur minima sunt
+                                explicabo unde facere aut amet quisquam, laborum mollitia totam
+                                adipisci architecto ex?
+                            </p>
+                            <span class="timestamp">4-20-69 4:20:06:90AM</span>
+                        </li>
+                        <li class="comment">
+                            <p class="comment-body">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+                                consequatur, odio quasi culpa id debitis consectetur minima sunt
+                                explicabo unde facere aut amet quisquam, laborum mollitia totam
+                                adipisci architecto ex?
+                            </p>
+                            <span class="timestamp">4-20-69 4:20:06:90AM</span>
+                        </li>
+                        <li class="comment">
+                            <p class="comment-body">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+                                consequatur, odio quasi culpa id debitis consectetur minima sunt
+                                explicabo unde facere aut amet quisquam, laborum mollitia totam
+                                adipisci architecto ex?
+                            </p>
+                            <span class="timestamp">4-20-69 4:20:06:90AM</span>
+                        </li>
+                        <li class="comment">
+                            <p class="comment-body">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+                                consequatur, odio quasi culpa id debitis consectetur minima sunt
+                                explicabo unde facere aut amet quisquam, laborum mollitia totam
+                                adipisci architecto ex?
+                            </p>
+                            <span class="timestamp">4-20-69 4:20:06:90AM</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <p id="error-display"></p>
+        </main>
+    </body>
+</html>

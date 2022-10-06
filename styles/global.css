@@ -1,11 +1,18 @@
 :root {
     --background: linear-gradient(180deg, rgb(57, 57, 99), rgb(12, 12, 27));
     --header-background: rgb(62, 84, 133);
+    --info-background: linear-gradient(-90deg, rgba(57, 57, 99, 0), rgb(12, 12, 27));
+    --info-background2: linear-gradient(-45deg, rgba(57, 57, 99, 0) 30%, rgb(12, 12, 27));
     --text-color: rgb(162, 162, 209);
     --label-color: rgb(75, 78, 102);
     --placeholder-color: rgb(136, 136, 153);
-    --offset-color: linear-gradient(0deg, rgb(83, 83, 143), rgb(39, 39, 70));
+    --offset-color: linear-gradient(to right, rgb(83, 83, 143), rgb(39, 39, 70));
     --action-color: rgb(17, 30, 58);
+    --horizontal-border-color: linear-gradient(
+        90deg,
+        rgb(162, 162, 209),
+        rgba(162, 162, 209, 0.281)
+    );
 
     --primary-font: 'Rubik', Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans',
         'DejaVu Sans', 'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref', sans-serif;
