@@ -36,6 +36,10 @@ export async function getDefinitions() {
     return await client.from('definitions').select('*').order('created_at').limit(100);
 }
 
+export async function getDefinition(id) {
+    return await client.from('definitions').select().eq('id', id).single();
+}
+
 /* STORAGE FUNCTIONS */
 
 export async function uploadImage(bucketName, imagePath, imageFile) {
