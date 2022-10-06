@@ -27,7 +27,7 @@ window.addEventListener('load', async () => {
 });
 
 /* Display Functions */
-export function displayError() {
+function displayError() {
     if (error) {
         // eslint-disable-next-line no-console
         console.log(error);
