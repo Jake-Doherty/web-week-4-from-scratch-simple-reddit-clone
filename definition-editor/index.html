@@ -59,11 +59,15 @@
                     ></textarea>
                 </label>
                 <div id="image-area">
-                    <img src="/assets/placeholder-image.png" alt="preview-image" />
-                    <input name="image-input" type="file" />
+                    <img
+                        src="/assets/placeholder-image.png"
+                        id="preview-image"
+                        alt="preview-image"
+                    />
+                    <input name="image-input" id="image-input" type="file" />
                 </div>
                 <button>Define It!</button>
-                <p class="error"></p>
+                <p class="error" id="error"></p>
                 <a href=""></a>
             </form>
         </main>
