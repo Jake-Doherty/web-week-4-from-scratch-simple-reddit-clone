@@ -33,13 +33,16 @@
 .definition-link {
     color: initial;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .definition-div {
-    color: var(--text-color);
+    width: 250px;
+    height: 250px;
     display: grid;
     margin: 0px;
     padding: 5px;
+    color: var(--text-color);
     background: var(--offset-color);
     border: 1px solid var(--text-color);
 }
@@ -79,6 +82,11 @@
 }
 
 .post-image {
-    width: 127px;
+    min-width: 10px;
+    max-width: 127px;
+    min-height: 10px;
+    max-height: 120px;
+    padding: 5px;
+    margin: auto;
     justify-self: center;
 }
