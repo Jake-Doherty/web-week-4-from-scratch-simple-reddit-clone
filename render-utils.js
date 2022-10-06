@@ -4,8 +4,7 @@ export function renderDefinition(definition) {
 
     const a = document.createElement('a');
     a.classList.add('definition-link');
-    a.href = '/definition/index.html';
-    // a.href = `/definition/?id=${definition.id}`;
+    a.href = `/definition/?id=${definition.id}`;
 
     const div = document.createElement('div');
     div.classList.add('definition-div');
