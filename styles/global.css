@@ -1,10 +1,10 @@
 :root {
-    --background: linear-gradient(45deg, rgb(47, 47, 83), rgb(18, 18, 53));
+    --background: linear-gradient(180deg, rgb(57, 57, 99), rgb(12, 12, 27));
     --header-background: rgb(62, 84, 133);
     --text-color: rgb(162, 162, 209);
     --label-color: rgb(75, 78, 102);
     --placeholder-color: rgb(136, 136, 153);
-    --offset-color: linear-gradient(-45deg, rgb(83, 83, 143), rgb(39, 39, 70));
+    --offset-color: linear-gradient(0deg, rgb(83, 83, 143), rgb(39, 39, 70));
     --action-color: rgb(17, 30, 58);
 
     --primary-font: 'Rubik', Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans',
@@ -16,8 +16,39 @@ body {
     font-family: var(--primary-font);
     color: var(--text-color);
     background: var(--background);
+    background-attachment: fixed;
     display: grid;
     grid-template-rows: auto 1fr;
+}
+
+body::-webkit-scrollbar {
+    width: 15px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--background);
+    border: 1px solid var(--text-color);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--label-color);
+    border: 1px solid var(--text-color);
+}
+
+body::-webkit-scrollbar-button:single-button:vertical:decrement {
+    height: 15px;
+    background: var(--offset-color);
+    border: 1px solid var(--text-color);
+}
+
+body::-webkit-scrollbar-button:single-button:vertical:increment {
+    background: var(--offset-color);
+    border: 1px solid var(--text-color);
+    height: 15px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: var(--text-color);
 }
 
 .page-header {
@@ -58,7 +89,7 @@ body {
 }
 
 main {
-    padding: 20px;
+    padding: 10px;
 }
 
 .avatar {

@@ -1,0 +1,84 @@
+#search-bar {
+    width: fit-content;
+    margin: 10px auto;
+}
+
+#search-bar h2 {
+    margin: 0;
+    text-align: center;
+}
+
+#definition-list {
+    display: grid;
+    grid-template: repeat(auto-fill, minmax(250px, 1fr)) / repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-flow: row;
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+}
+
+.definition-item {
+    display: grid;
+    width: 250px;
+    height: 250px;
+    box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.637);
+}
+
+.definition-item:hover {
+    transform: scale(105%);
+    box-shadow: 3px 5px 7px 3px rgba(0, 0, 0, 0.637);
+    transition: all 250ms ease-in;
+}
+
+.definition-link {
+    color: initial;
+    text-decoration: none;
+}
+
+.definition-div {
+    color: var(--text-color);
+    display: grid;
+    margin: 0px;
+    padding: 5px;
+    background: var(--offset-color);
+    border: 1px solid var(--text-color);
+}
+
+.definition-title {
+    margin: 0;
+}
+
+.category {
+    margin: 0;
+}
+
+.description {
+    background: var(--action-color);
+    margin: 0;
+    height: 80px;
+    padding: 5px 8px;
+    overflow: auto;
+    box-shadow: inset 0px 0px 3px 1px rgba(0, 0, 0, 0.74);
+}
+
+/* definition description scroll bar stuff */
+.description::-webkit-scrollbar {
+    width: 5px;
+}
+
+.description::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+.description::-webkit-scrollbar-thumb {
+    background: var(--label-color);
+}
+
+.description::-webkit-scrollbar-thumb:hover {
+    background: var(--text-color);
+}
+
+.post-image {
+    width: 127px;
+    justify-self: center;
+}

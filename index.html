@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
         <!-- title and favicon -->
-        <title>Supabase Web App</title>
+        <title>Definitions List</title>
         <link rel="icon" type="image/x-icon" href="/assets/alchemy-favicon.png" />
 
         <!-- js -->
@@ -26,18 +26,435 @@
         <link rel="stylesheet" href="/styles/reset.css" />
         <link rel="stylesheet" href="/styles/global.css" />
         <!-- add link for page specific css -->
+        <link rel="stylesheet" href="/styles/definitions-main.css" />
     </head>
 
     <body>
         <header class="page-header">
-            <img class="logo" src="/assets/html_css_js.png" alt="logo" />
-            <p class="title">Supabase Web App</p>
+            <img class="logo" src="/assets/dictionary.png" alt="logo" />
+            <p class="title">Definitions List</p>
             <nav>
                 <a href="/definition-editor/index.html">Add Definition</a>
                 <a id="sign-out-link" href="auth">Sign Out</a>
             </nav>
         </header>
 
-        <main></main>
+        <main>
+            <section id="search-bar">
+                <label>
+                    <h2 id="form-label">Narrow Your Search</h2>
+                    <form id="search-form">
+                        <input name="title" id="search-field" />
+                        <select name="category" id="category-select">
+                            <option value="">All Categories</option>
+                        </select>
+                        <button id="submit">🔍</button>
+                    </form>
+                </label>
+            </section>
+            <section id="definition-section">
+                <ul id="definition-list">
+                    <li class="definition-item">
+                        <a class="definition-link" href="">
+                            <div class="definition-div">
+                                <h3 class="definition-title">Title</h3>
+                                <span class="category">JS</span>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                                    quisquam ad necessitatibus illo exercitationem? Sint hic placeat
+                                    porro voluptas? Sed repellat est illum sequi consequatur quod
+                                    architecto nam nemo distinctio.
+                                </p>
+                                <img
+                                    class="post-image"
+                                    src="/assets/placeholder-image.png"
+                                    alt="preview-image"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                    <li class="definition-item">
+                        <a class="definition-link" href="">
+                            <div class="definition-div">
+                                <h3 class="definition-title">Title</h3>
+                                <span class="category">JS</span>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                                    quisquam ad necessitatibus illo exercitationem? Sint hic placeat
+                                    porro voluptas? Sed repellat est illum sequi consequatur quod
+                                    architecto nam nemo distinctio.
+                                </p>
+                                <img
+                                    class="post-image"
+                                    src="/assets/placeholder-image.png"
+                                    alt="preview-image"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                    <li class="definition-item">
+                        <a class="definition-link" href="">
+                            <div class="definition-div">
+                                <h3 class="definition-title">Title</h3>
+                                <span class="category">JS</span>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                                    quisquam ad necessitatibus illo exercitationem? Sint hic placeat
+                                    porro voluptas? Sed repellat est illum sequi consequatur quod
+                                    architecto nam nemo distinctio.
+                                </p>
+                                <img
+                                    class="post-image"
+                                    src="/assets/placeholder-image.png"
+                                    alt="preview-image"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                    <li class="definition-item">
+                        <a class="definition-link" href="">
+                            <div class="definition-div">
+                                <h3 class="definition-title">Title</h3>
+                                <span class="category">JS</span>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                                    quisquam ad necessitatibus illo exercitationem? Sint hic placeat
+                                    porro voluptas? Sed repellat est illum sequi consequatur quod
+                                    architecto nam nemo distinctio.
+                                </p>
+                                <img
+                                    class="post-image"
+                                    src="/assets/placeholder-image.png"
+                                    alt="preview-image"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                    <li class="definition-item">
+                        <a class="definition-link" href="">
+                            <div class="definition-div">
+                                <h3 class="definition-title">Title</h3>
+                                <span class="category">JS</span>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                                    quisquam ad necessitatibus illo exercitationem? Sint hic placeat
+                                    porro voluptas? Sed repellat est illum sequi consequatur quod
+                                    architecto nam nemo distinctio.
+                                </p>
+                                <img
+                                    class="post-image"
+                                    src="/assets/placeholder-image.png"
+                                    alt="preview-image"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                    <li class="definition-item">
+                        <a class="definition-link" href="">
+                            <div class="definition-div">
+                                <h3 class="definition-title">Title</h3>
+                                <span class="category">JS</span>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                                    quisquam ad necessitatibus illo exercitationem? Sint hic placeat
+                                    porro voluptas? Sed repellat est illum sequi consequatur quod
+                                    architecto nam nemo distinctio.
+                                </p>
+                                <img
+                                    class="post-image"
+                                    src="/assets/placeholder-image.png"
+                                    alt="preview-image"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                    <li class="definition-item">
+                        <a class="definition-link" href="">
+                            <div class="definition-div">
+                                <h3 class="definition-title">Title</h3>
+                                <span class="category">JS</span>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                                    quisquam ad necessitatibus illo exercitationem? Sint hic placeat
+                                    porro voluptas? Sed repellat est illum sequi consequatur quod
+                                    architecto nam nemo distinctio.
+                                </p>
+                                <img
+                                    class="post-image"
+                                    src="/assets/placeholder-image.png"
+                                    alt="preview-image"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                    <li class="definition-item">
+                        <a class="definition-link" href="">
+                            <div class="definition-div">
+                                <h3 class="definition-title">Title</h3>
+                                <span class="category">JS</span>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                                    quisquam ad necessitatibus illo exercitationem? Sint hic placeat
+                                    porro voluptas? Sed repellat est illum sequi consequatur quod
+                                    architecto nam nemo distinctio.
+                                </p>
+                                <img
+                                    class="post-image"
+                                    src="/assets/placeholder-image.png"
+                                    alt="preview-image"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                    <li class="definition-item">
+                        <a class="definition-link" href="">
+                            <div class="definition-div">
+                                <h3 class="definition-title">Title</h3>
+                                <span class="category">JS</span>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                                    quisquam ad necessitatibus illo exercitationem? Sint hic placeat
+                                    porro voluptas? Sed repellat est illum sequi consequatur quod
+                                    architecto nam nemo distinctio.
+                                </p>
+                                <img
+                                    class="post-image"
+                                    src="/assets/placeholder-image.png"
+                                    alt="preview-image"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                    <li class="definition-item">
+                        <a class="definition-link" href="">
+                            <div class="definition-div">
+                                <h3 class="definition-title">Title</h3>
+                                <span class="category">JS</span>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                                    quisquam ad necessitatibus illo exercitationem? Sint hic placeat
+                                    porro voluptas? Sed repellat est illum sequi consequatur quod
+                                    architecto nam nemo distinctio.
+                                </p>
+                                <img
+                                    class="post-image"
+                                    src="/assets/placeholder-image.png"
+                                    alt="preview-image"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                    <li class="definition-item">
+                        <a class="definition-link" href="">
+                            <div class="definition-div">
+                                <h3 class="definition-title">Title</h3>
+                                <span class="category">JS</span>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                                    quisquam ad necessitatibus illo exercitationem? Sint hic placeat
+                                    porro voluptas? Sed repellat est illum sequi consequatur quod
+                                    architecto nam nemo distinctio.
+                                </p>
+                                <img
+                                    class="post-image"
+                                    src="/assets/placeholder-image.png"
+                                    alt="preview-image"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                    <li class="definition-item">
+                        <a class="definition-link" href="">
+                            <div class="definition-div">
+                                <h3 class="definition-title">Title</h3>
+                                <span class="category">JS</span>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                                    quisquam ad necessitatibus illo exercitationem? Sint hic placeat
+                                    porro voluptas? Sed repellat est illum sequi consequatur quod
+                                    architecto nam nemo distinctio.
+                                </p>
+                                <img
+                                    class="post-image"
+                                    src="/assets/placeholder-image.png"
+                                    alt="preview-image"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                    <li class="definition-item">
+                        <a class="definition-link" href="">
+                            <div class="definition-div">
+                                <h3 class="definition-title">Title</h3>
+                                <span class="category">JS</span>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                                    quisquam ad necessitatibus illo exercitationem? Sint hic placeat
+                                    porro voluptas? Sed repellat est illum sequi consequatur quod
+                                    architecto nam nemo distinctio.
+                                </p>
+                                <img
+                                    class="post-image"
+                                    src="/assets/placeholder-image.png"
+                                    alt="preview-image"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                    <li class="definition-item">
+                        <a class="definition-link" href="">
+                            <div class="definition-div">
+                                <h3 class="definition-title">Title</h3>
+                                <span class="category">JS</span>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                                    quisquam ad necessitatibus illo exercitationem? Sint hic placeat
+                                    porro voluptas? Sed repellat est illum sequi consequatur quod
+                                    architecto nam nemo distinctio.
+                                </p>
+                                <img
+                                    class="post-image"
+                                    src="/assets/placeholder-image.png"
+                                    alt="preview-image"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                    <li class="definition-item">
+                        <a class="definition-link" href="">
+                            <div class="definition-div">
+                                <h3 class="definition-title">Title</h3>
+                                <span class="category">JS</span>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                                    quisquam ad necessitatibus illo exercitationem? Sint hic placeat
+                                    porro voluptas? Sed repellat est illum sequi consequatur quod
+                                    architecto nam nemo distinctio.
+                                </p>
+                                <img
+                                    class="post-image"
+                                    src="/assets/placeholder-image.png"
+                                    alt="preview-image"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                    <li class="definition-item">
+                        <a class="definition-link" href="">
+                            <div class="definition-div">
+                                <h3 class="definition-title">Title</h3>
+                                <span class="category">JS</span>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                                    quisquam ad necessitatibus illo exercitationem? Sint hic placeat
+                                    porro voluptas? Sed repellat est illum sequi consequatur quod
+                                    architecto nam nemo distinctio.
+                                </p>
+                                <img
+                                    class="post-image"
+                                    src="/assets/placeholder-image.png"
+                                    alt="preview-image"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                    <li class="definition-item">
+                        <a class="definition-link" href="">
+                            <div class="definition-div">
+                                <h3 class="definition-title">Title</h3>
+                                <span class="category">JS</span>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                                    quisquam ad necessitatibus illo exercitationem? Sint hic placeat
+                                    porro voluptas? Sed repellat est illum sequi consequatur quod
+                                    architecto nam nemo distinctio.
+                                </p>
+                                <img
+                                    class="post-image"
+                                    src="/assets/placeholder-image.png"
+                                    alt="preview-image"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                    <li class="definition-item">
+                        <a class="definition-link" href="">
+                            <div class="definition-div">
+                                <h3 class="definition-title">Title</h3>
+                                <span class="category">JS</span>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                                    quisquam ad necessitatibus illo exercitationem? Sint hic placeat
+                                    porro voluptas? Sed repellat est illum sequi consequatur quod
+                                    architecto nam nemo distinctio.
+                                </p>
+                                <img
+                                    class="post-image"
+                                    src="/assets/placeholder-image.png"
+                                    alt="preview-image"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                    <li class="definition-item">
+                        <a class="definition-link" href="">
+                            <div class="definition-div">
+                                <h3 class="definition-title">Title</h3>
+                                <span class="category">JS</span>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                                    quisquam ad necessitatibus illo exercitationem? Sint hic placeat
+                                    porro voluptas? Sed repellat est illum sequi consequatur quod
+                                    architecto nam nemo distinctio.
+                                </p>
+                                <img
+                                    class="post-image"
+                                    src="/assets/placeholder-image.png"
+                                    alt="preview-image"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                    <li class="definition-item">
+                        <a class="definition-link" href="">
+                            <div class="definition-div">
+                                <h3 class="definition-title">Title</h3>
+                                <span class="category">JS</span>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                                    quisquam ad necessitatibus illo exercitationem? Sint hic placeat
+                                    porro voluptas? Sed repellat est illum sequi consequatur quod
+                                    architecto nam nemo distinctio.
+                                </p>
+                                <img
+                                    class="post-image"
+                                    src="/assets/placeholder-image.png"
+                                    alt="preview-image"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                    <li class="definition-item">
+                        <a class="definition-link" href="">
+                            <div class="definition-div">
+                                <h3 class="definition-title">Title</h3>
+                                <span class="category">JS</span>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                                    quisquam ad necessitatibus illo exercitationem? Sint hic placeat
+                                    porro voluptas? Sed repellat est illum sequi consequatur quod
+                                    architecto nam nemo distinctio.
+                                </p>
+                                <img
+                                    class="post-image"
+                                    src="/assets/placeholder-image.png"
+                                    alt="preview-image"
+                                />
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </main>
     </body>
 </html>
