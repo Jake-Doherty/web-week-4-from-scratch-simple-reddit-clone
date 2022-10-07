@@ -33,3 +33,18 @@ export function renderDefinition(definition) {
 
     return li;
 }
+
+export function renderComment(comment) {
+    const li = document.createElement('li');
+    li.classList.add('comment');
+
+    const p = document.createElement('p');
+    p.classList.add('comment-body');
+    p.textContent = comment.text;
+
+    const span = document.createElement('span');
+    span.classList.add('timestamp');
+    span.textContent = comment.created_at;
+
+    li.append(p, span);
+}
