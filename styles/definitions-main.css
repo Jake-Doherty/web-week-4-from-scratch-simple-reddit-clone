@@ -90,3 +90,7 @@
     margin: auto;
     justify-self: center;
 }
+
+.hidden {
+    display: none;
+}
