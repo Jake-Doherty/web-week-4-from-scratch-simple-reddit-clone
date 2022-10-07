@@ -32,6 +32,10 @@ export async function createDefinition(definition) {
     return await client.from('definitions').insert(definition).single();
 }
 
+export async function createComment(comment) {
+    return await client.from('comments').insert(comment).single();
+}
+
 export async function getDefinitions() {
     return await client.from('definitions').select('*').order('created_at').limit(100);
 }
