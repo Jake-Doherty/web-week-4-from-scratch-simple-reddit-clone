@@ -1,7 +1,7 @@
 /* Imports */
 // this will check if we have a user and set signout link if it exists
 import '../auth/user.js';
-import { getDefinition } from '../fetch-utils.js';
+import { createComment, getDefinition } from '../fetch-utils.js';
 
 /* Get DOM Elements */
 const errorDisplay = document.getElementById('error-display');
@@ -9,6 +9,8 @@ const postTitle = document.getElementById('post-title');
 const categoryDisplay = document.getElementById('category-display');
 const postDescription = document.getElementById('post-description');
 const image = document.getElementById('image');
+const commentInput = document.getElementById('comment-input');
+// const commentList = document.getElementById('comment-list');
 
 /* State */
 let error = null;
@@ -31,6 +33,29 @@ window.addEventListener('load', async () => {
         displayError();
     } else {
         displayDefinition();
+    }
+});
+
+commentInput.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(commentInput);
+
+    const addComment = {
+        text: formData.get('comment-textarea'),
+        definition_id: definition.id,
+    };
+
+    const response = await createComment(addComment);
+    error = response.error;
+
+    if (error) {
+        displayError();
+    } else {
+        const comment = response.data;
+        definition.comments.unshift(comment);
+        // displayComments();
+        commentInput.reset();
     }
 });
 
