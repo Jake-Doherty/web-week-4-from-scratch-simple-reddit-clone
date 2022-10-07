@@ -12,7 +12,6 @@ const postDescription = document.getElementById('post-description');
 const image = document.getElementById('image');
 const commentInput = document.getElementById('comment-input');
 const commentList = document.getElementById('comment-list');
-const placeHolderImage = 'assets/placeholder-image.png';
 
 /* State */
 let error = null;
