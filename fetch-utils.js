@@ -41,7 +41,12 @@ export async function getDefinitions() {
 }
 
 export async function getDefinition(id) {
-    return await client.from('definitions').select().eq('id', id).single();
+    return await client
+        .from('definitions')
+        .select('*, comments (*)')
+        .eq('id', id)
+        .order('created_at', { foreignTable: 'comments', ascending: false })
+        .single();
 }
 
 /* STORAGE FUNCTIONS */
