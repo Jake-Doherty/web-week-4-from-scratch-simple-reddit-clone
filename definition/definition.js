@@ -2,6 +2,7 @@
 // this will check if we have a user and set signout link if it exists
 import '../auth/user.js';
 import { createComment, getDefinition } from '../fetch-utils.js';
+import { renderComment } from '../render-utils.js';
 
 /* Get DOM Elements */
 const errorDisplay = document.getElementById('error-display');
@@ -10,7 +11,7 @@ const categoryDisplay = document.getElementById('category-display');
 const postDescription = document.getElementById('post-description');
 const image = document.getElementById('image');
 const commentInput = document.getElementById('comment-input');
-// const commentList = document.getElementById('comment-list');
+const commentList = document.getElementById('comment-list');
 
 /* State */
 let error = null;
@@ -33,6 +34,7 @@ window.addEventListener('load', async () => {
         displayError();
     } else {
         displayDefinition();
+        displayComments();
     }
 });
 
@@ -54,7 +56,7 @@ commentInput.addEventListener('submit', async (e) => {
     } else {
         const comment = response.data;
         definition.comments.unshift(comment);
-        // displayComments();
+        displayComments();
         commentInput.reset();
     }
 });
@@ -75,4 +77,12 @@ function displayDefinition() {
     categoryDisplay.textContent = definition.category;
     postDescription.textContent = definition.description;
     image.src = definition.image_url;
+}
+
+function displayComments() {
+    commentList.innerHTML = '';
+    for (const comment of definition.comments) {
+        const commentEl = renderComment(comment);
+        commentList.append(commentEl);
+    }
 }
