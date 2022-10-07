@@ -126,3 +126,7 @@
 .comment-body {
     margin: 5px 0 10px;
 }
+
+.hidden {
+    display: none;
+}

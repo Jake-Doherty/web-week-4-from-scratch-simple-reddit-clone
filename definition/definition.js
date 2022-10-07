@@ -12,6 +12,7 @@ const postDescription = document.getElementById('post-description');
 const image = document.getElementById('image');
 const commentInput = document.getElementById('comment-input');
 const commentList = document.getElementById('comment-list');
+const placeHolderImage = 'assets/placeholder-image.png';
 
 /* State */
 let error = null;
@@ -76,7 +77,11 @@ function displayDefinition() {
     postTitle.textContent = definition.subject;
     categoryDisplay.textContent = definition.category;
     postDescription.textContent = definition.description;
-    image.src = definition.image_url;
+    if (definition.image_url.length <= 101) {
+        image.classList.add('hidden');
+    } else {
+        image.src = definition.image_url;
+    }
 }
 
 function displayComments() {
