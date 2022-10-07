@@ -23,7 +23,11 @@ export function renderDefinition(definition) {
 
     const img = document.createElement('img');
     img.classList.add('post-image');
-    img.src = definition.image_url;
+    if (definition.image_url.length <= 101) {
+        img.src = 'assets/placeholder-image.png';
+    } else {
+        img.src = definition.image_url;
+    }
 
     div.append(h3, span, p, img);
 
@@ -47,4 +51,6 @@ export function renderComment(comment) {
     span.textContent = comment.created_at;
 
     li.append(p, span);
+
+    return li;
 }
