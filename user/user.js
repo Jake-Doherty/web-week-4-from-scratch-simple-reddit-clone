@@ -7,8 +7,6 @@ const user = getUser();
 
 /* Get DOM Elements */
 const profileForm = document.getElementById('profile-form');
-const displayName = document.getElementById('display-name');
-const userBio = document.getElementById('bio');
 const imageInput = document.getElementById('avatar-input');
 const imagePreview = document.getElementById('preview');
 const updateButton = document.getElementById('update-button');
