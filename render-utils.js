@@ -54,3 +54,10 @@ export function renderComment(comment) {
 
     return li;
 }
+
+export function renderSelectOption(category) {
+    const option = document.createElement('option');
+    option.textContent = category.name;
+    option.value = category.name;
+    return option;
+}
