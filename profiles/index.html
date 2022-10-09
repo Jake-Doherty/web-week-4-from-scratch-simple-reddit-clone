@@ -12,7 +12,7 @@
 
         <!-- js -->
         <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-        <script type="module" src="app.js"></script>
+        <script type="module" src="/profiles/profiles.js"></script>
 
         <!-- fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,7 +26,7 @@
         <link rel="stylesheet" href="/styles/reset.css" />
         <link rel="stylesheet" href="/styles/global.css" />
         <!-- add link for page specific css -->
-        <link rel="stylesheet" href="/styles/definitions-main.css" />
+        <link rel="stylesheet" href="/profiles/profiles.css" />
     </head>
 
     <body>
@@ -34,32 +34,25 @@
             <img class="logo" src="/assets/dictionary.png" alt="logo" />
             <p class="title">Definitions List</p>
             <nav>
-                <a href="/profiles">User Profiles</a>
                 <a href="/user">Profile</a>
+                <a href="/">Definitions</a>
                 <a href="/definition-editor/index.html">Add Definition</a>
-                <a id="sign-out-link" href="auth">Sign Out</a>
+                <a id="sign-out-link" href="/auth">Sign Out</a>
             </nav>
         </header>
 
         <main>
             <section id="search-bar">
                 <label>
-                    <h2 id="form-label">Narrow Your Search</h2>
+                    <h2 id="form-label">Who are you looking for?</h2>
                     <form id="search-form">
-                        <input
-                            name="subject"
-                            id="search-field"
-                            placeholder="Search by post title..."
-                        />
-                        <select name="category" id="category-select">
-                            <option value="">All Categories</option>
-                        </select>
+                        <input name="user-name" id="search-field" placeholder="Search by user..." />
                         <button id="submit">🔍</button>
                     </form>
                 </label>
             </section>
-            <section id="definition-section">
-                <ul id="definition-list"></ul>
+            <section id="user-profile-section">
+                <ul id="user-profile-list"></ul>
             </section>
             <p id="error-display"></p>
         </main>

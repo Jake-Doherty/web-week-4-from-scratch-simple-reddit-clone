@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+        <!-- title and favicon -->
+        <title>Definitions List</title>
+        <link rel="icon" type="image/x-icon" href="/assets/alchemy-favicon.png" />
+
+        <!-- js -->
+        <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+        <script type="module" src="/user/user.js"></script>
+
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap"
+        />
+
+        <!-- css -->
+        <link rel="stylesheet" href="/styles/reset.css" />
+        <link rel="stylesheet" href="/styles/global.css" />
+        <!-- add link for page specific css -->
+        <link rel="stylesheet" href="/user/user.css" />
+    </head>
+
+    <body>
+        <header class="page-header">
+            <img class="logo" src="/assets/dictionary.png" alt="logo" />
+            <p class="title">Create Profile</p>
+            <nav>
+                <a href="/profiles">User Profiles</a>
+                <a href="/">Definition List</a>
+                <a href="/definition-editor">Add Definition</a>
+                <a id="sign-out-link" href="/auth">Sign Out</a>
+            </nav>
+        </header>
+
+        <main>
+            <!-- SEARCH BAR FOR FUTURE UPDATE ON DIFFERENT PAGE. JUST HERE UNTIL PAGE IS CREATED -->
+            <!-- <section class="hidden" id="search-bar">
+                <label>
+                    <h2 id="form-label">Who are you looking for?</h2>
+                    <form id="search-form">
+                        <input name="user-name" id="search-field" placeholder="Search by user..." />
+                        <select name="category" id="category-select">
+                            <option value="">All Categories</option>
+                        </select>
+                        <button id="submit">🔍</button>
+                    </form>
+                </label>
+            </section> -->
+            <section id="user-form">
+                <form id="profile-form">
+                    <label>
+                        <h5>Username</h5>
+                        <input
+                            name="display-name"
+                            id="display-name"
+                            required
+                            placeholder="choose a username..."
+                        />
+                    </label>
+
+                    <div id="image-input-cont">
+                        <label>
+                            <h5>Avatar</h5>
+                            <img
+                                id="preview"
+                                class="avatar"
+                                alt="avatar preview"
+                                src="/assets/placeholder-image.png"
+                            />
+                        </label>
+                        <input id="avatar-input" type="file" name="avatar-input" />
+                    </div>
+
+                    <label>
+                        <h5>Bio</h5>
+                        <textarea
+                            name="bio"
+                            id="bio"
+                            required
+                            placeholder="more details about you..."
+                        ></textarea>
+                    </label>
+
+                    <button id="update-button">Update Profile</button>
+
+                    <p id="error-display"></p>
+                </form>
+            </section>
+            <p id="error-display"></p>
+        </main>
+    </body>
+</html>

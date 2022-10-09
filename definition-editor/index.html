@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="icon" type="image/x-icon" href="/assets/alchemy-favicon.png" />
+
+        <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+        <script type="module" src="./definition-editor.js"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap"
+        />
+
+        <link rel="stylesheet" href="/styles/reset.css" />
+        <link rel="stylesheet" href="/styles/global.css" />
+        <link rel="stylesheet" href="./definition-editor.css" />
+        <title>Add Definition</title>
+    </head>
+
+    <body>
+        <header class="page-header">
+            <img class="logo" src="/assets/dictionary.png" />
+            <p class="title">Add Definition</p>
+            <nav>
+                <a href="/profiles">User Profiles</a>
+                <a href="/user">Profile</a>
+                <a href="/">Definitions Board</a>
+                <a id="sign-out-link" href="/auth">Sign Out</a>
+            </nav>
+        </header>
+
+        <main>
+            <form id="add-definition-form">
+                <h2>What are you trying to define?</h2>
+                <label>
+                    Post Subject
+                    <input type="text" name="subject" placeholder="Title..." required />
+                </label>
+                <label>
+                    Post Category
+                    <select name="category-select" id="category-select" required>
+                        <option value="">Please Select A Category</option>
+                    </select>
+                </label>
+                <label>
+                    Post Text
+                    <textarea
+                        name="description-area"
+                        id="description"
+                        cols="30"
+                        rows="10"
+                        placeholder="describe what you're trying to define"
+                    ></textarea>
+                </label>
+                <div id="image-area">
+                    <img
+                        src="/assets/placeholder-image.png"
+                        id="preview-image"
+                        alt="preview-image"
+                    />
+                    <input name="image-input" id="image-input" type="file" />
+                </div>
+                <button>Define It!</button>
+                <p class="error" id="error"></p>
+                <a href=""></a>
+            </form>
+        </main>
+    </body>
+</html>
