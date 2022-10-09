@@ -25,7 +25,7 @@
 }
 
 .definition-item:hover {
-    transform: scale(105%);
+    transform: scale(110%);
     box-shadow: 3px 5px 7px 3px rgba(0, 0, 0, 0.637);
     transition: all 250ms ease-in;
 }
@@ -40,6 +40,8 @@
     width: 250px;
     height: 250px;
     display: grid;
+    grid-template-rows: 28px 25px 80px 80px;
+    gap: 5px;
     margin: 0px;
     padding: 5px;
     color: var(--text-color);
@@ -48,16 +50,20 @@
 }
 
 .definition-title {
+    background: var(--offset-color2);
     margin: 0;
+    padding: 3px;
 }
 
 .category {
     margin: 0;
+    background: var(--offset-color2);
+    padding: 3px;
 }
 
 .description {
     background: var(--action-color);
-    margin: 0;
+    margin: 10px 0;
     height: 80px;
     padding: 5px 8px;
     overflow: auto;
@@ -67,6 +73,7 @@
 /* definition description scroll bar stuff */
 .description::-webkit-scrollbar {
     width: 5px;
+    height: 5px;
 }
 
 .description::-webkit-scrollbar-track {
@@ -82,15 +89,48 @@
 }
 
 .post-image {
-    min-width: 10px;
-    max-width: 127px;
+    height: 100%;
+    /* min-width: 10px;
+    max-width: 120px;
     min-height: 10px;
-    max-height: 120px;
+    max-height: 120px; */
     padding: 5px;
-    margin: auto;
+    margin: 5px;
     justify-self: center;
 }
 
-.hidden {
-    display: none;
+#search-bar {
+    background: var(--offset-color);
+    padding: 5px;
+    border: 1px solid var(--text-color);
+}
+
+#search-form > input {
+    color: var(--text-color);
+    background: var(--action-color);
+    padding: 5px;
+    border: 1px solid var(--text-color);
+}
+
+#search-form > input::placeholder {
+    color: var(--text-color);
+    opacity: 0.5;
+}
+
+#search-form > select {
+    color: var(--text-color);
+    background: var(--action-color);
+    padding: 4px;
+    border: 1px solid var(--text-color);
+}
+
+#search-form > button {
+    width: 27px;
+    height: 27px;
+    position: relative;
+    top: -1px;
+    background: var(--action-color);
+    border: 1px solid var(--text-color);
+    font-size: 0.5rem;
+    text-align: center;
 }
