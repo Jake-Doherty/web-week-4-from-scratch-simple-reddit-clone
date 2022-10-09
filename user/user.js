@@ -47,7 +47,7 @@ profileForm.addEventListener('submit', async (e) => {
     if (error) {
         displayError();
     } else {
-        return;
+        location.replace('../');
     }
 });
 
