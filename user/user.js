@@ -1,18 +1,36 @@
 /* Imports */
 // this will check if we have a user and set signout link if it exists
 import '../auth/user.js';
-import { updateProfile, uploadImage } from '../fetch-utils.js';
+import { getProfile, getUser, updateProfile, uploadImage } from '../fetch-utils.js';
+
+const user = getUser();
 
 /* Get DOM Elements */
 const profileForm = document.getElementById('profile-form');
-const imageInput = document.getElementById('image-input');
+const displayName = document.getElementById('display-name');
+const userBio = document.getElementById('bio');
+const imageInput = document.getElementById('avatar-input');
 const imagePreview = document.getElementById('preview');
+const updateButton = document.getElementById('update-button');
 const errorDisplay = document.getElementById('error-display');
 
 /* State */
 let error = null;
+let profile = null;
 
 /* Events */
+window.addEventListener('load', async () => {
+    const response = await getProfile(user.id);
+    error = response.error;
+    profile = response.data;
+
+    if (error) {
+        displayError();
+    } else {
+        displayProfile();
+    }
+});
+
 imageInput.addEventListener('change', () => {
     const file = imageInput.files[0];
     if (file) {
@@ -26,12 +44,14 @@ profileForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     errorDisplay.textContent = '';
+    updateButton.disabled;
+    updateButton.textContent = 'Please Wait...';
 
     const formData = new FormData(profileForm);
 
-    const imageFile = formData.get('image-input');
+    const imageFile = formData.get('avatar-input');
     const randomFolder = Math.floor(Math.random() * Date.now());
-    const imagePath = `avatar-images/${randomFolder}/${imageFile}`;
+    const imagePath = `avatar-images/${randomFolder}/${imageFile.name}`;
     const url = await uploadImage('avatar-images', imagePath, imageFile);
 
     const profile = {
@@ -47,6 +67,7 @@ profileForm.addEventListener('submit', async (e) => {
     if (error) {
         displayError();
     } else {
+        updateButton.textContent = 'All Done!';
         location.replace('../');
     }
 });
@@ -60,4 +81,10 @@ function displayError() {
     } else {
         errorDisplay.textContent = '';
     }
+}
+
+function displayProfile() {
+    document.getElementsByName('display-name')[0].placeholder = profile.display_name;
+    imagePreview.src = profile.avatar_image_url;
+    document.getElementsByName('bio')[0].placeholder = profile.bio;
 }
