@@ -100,3 +100,7 @@ export async function updateProfile(profile) {
 export async function getProfile(id) {
     return await client.from('profile').select('*').eq('id', id).maybeSingle();
 }
+
+export async function getProfiles() {
+    return await client.from('profile').select('*');
+}
