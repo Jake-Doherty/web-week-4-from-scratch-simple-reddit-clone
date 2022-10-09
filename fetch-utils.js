@@ -36,8 +36,20 @@ export async function createComment(comment) {
     return await client.from('comments').insert(comment).single();
 }
 
-export async function getDefinitions() {
-    return await client.from('definitions').select('*').order('created_at').limit(100);
+export async function getDefinitions(subject, category) {
+    let query = client.from('definitions').select().order('created_at').limit(100);
+
+    if (subject) {
+        query = query.ilike('subject', `%${subject}%`);
+    }
+
+    if (category) {
+        query = query.eq('category', category);
+    }
+
+    const response = await query;
+
+    return response;
 }
 
 export async function getDefinition(id) {
@@ -47,6 +59,10 @@ export async function getDefinition(id) {
         .eq('id', id)
         .order('created_at', { foreignTable: 'comments', ascending: false })
         .single();
+}
+
+export async function getCategories() {
+    return await client.from('categories').select('name');
 }
 
 /* STORAGE FUNCTIONS */
