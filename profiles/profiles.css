@@ -1,0 +1,74 @@
+#search-bar {
+    width: fit-content;
+    margin: 10px auto;
+    background: var(--offset-color);
+    padding: 5px;
+    border: 1px solid var(--text-color);
+}
+
+#search-bar > label {
+    display: grid;
+    justify-items: center;
+}
+
+#search-bar h2 {
+    margin: 5px 0;
+    text-align: center;
+}
+#search-form {
+    width: 100%;
+}
+
+#search-form > input {
+    width: 258px;
+    color: var(--text-color);
+    background: var(--action-color);
+    padding: 5px;
+    border: 1px solid var(--text-color);
+}
+
+#search-form > input::placeholder {
+    color: var(--text-color);
+    opacity: 0.5;
+}
+
+#search-form > select {
+    color: var(--text-color);
+    background: var(--action-color);
+    padding: 4px;
+    border: 1px solid var(--text-color);
+}
+
+#search-form > button {
+    width: 27px;
+    height: 27px;
+    position: relative;
+    top: -1px;
+    background: var(--action-color);
+    border: 1px solid var(--text-color);
+    font-size: 0.5rem;
+    text-align: center;
+}
+
+#user-profile-list {
+    display: grid;
+    gap: 10px;
+}
+
+.profile-item {
+    width: 200px;
+    height: 75px;
+    display: grid;
+    grid-template-columns: 125px 75px;
+    background: var(--offset-color2);
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    text-decoration: none;
+    justify-items: center;
+    align-items: center;
+}
+
+.profile-avatar {
+    height: 50px;
+    border-radius: 50%;
+}
