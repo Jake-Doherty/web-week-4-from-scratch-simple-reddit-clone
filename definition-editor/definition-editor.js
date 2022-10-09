@@ -1,18 +1,35 @@
 /* Imports */
 // this will check if we have a user and set signout link if it exists
 import '../auth/user.js';
-import { createDefinition, uploadImage } from '../fetch-utils.js';
+import { createDefinition, getCategories, uploadImage } from '../fetch-utils.js';
+import { renderSelectOption } from '../render-utils.js';
 
 /* Get DOM Elements */
 const addDefinitionForm = document.getElementById('add-definition-form');
 const errorDisplay = document.getElementById('error');
 const imageInput = document.getElementById('image-input');
 const imagePreview = document.getElementById('preview-image');
+const categorySelect = document.getElementById('category-select');
 
 /* State */
 let error = null;
+let categories = [];
 
 /* Events */
+
+window.addEventListener('load', async () => {
+    const response = await getCategories();
+
+    error = response.error;
+    categories = response.data;
+
+    if (error) {
+        displayError();
+    } else {
+        displayCategories();
+    }
+});
+
 imageInput.addEventListener('change', () => {
     const file = imageInput.files[0];
     if (file) {
@@ -58,5 +75,12 @@ function displayError() {
         errorDisplay.textContent = error.message;
     } else {
         errorDisplay.textContent = '';
+    }
+}
+
+function displayCategories() {
+    for (const category of categories) {
+        const categoryEl = renderSelectOption(category);
+        categorySelect.append(categoryEl);
     }
 }
