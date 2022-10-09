@@ -96,3 +96,7 @@ export async function uploadImage(bucketName, imagePath, imageFile) {
 export async function updateProfile(profile) {
     return await client.from('profile').upsert(profile).single();
 }
+
+export async function getProfile(id) {
+    return await client.from('profile').select('*').eq('id', id).maybeSingle();
+}
