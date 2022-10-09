@@ -61,3 +61,28 @@ export function renderSelectOption(category) {
     option.value = category.name;
     return option;
 }
+
+export function renderProfile(profile) {
+    const li = document.createElement('li');
+
+    const a = document.createElement('a');
+    a.href = '';
+
+    const div = document.createElement('div');
+    div.classList.add('profile-item');
+
+    const h3 = document.createElement('h3');
+    h3.textContent = profile.display_name;
+
+    const img = document.createElement('img');
+    img.classList.add('profile-avatar');
+    img.src = profile.avatar_image_url;
+
+    div.append(h3, img);
+
+    a.append(div);
+
+    li.append(a);
+
+    return li;
+}
