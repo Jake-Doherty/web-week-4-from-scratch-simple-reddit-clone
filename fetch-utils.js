@@ -90,3 +90,9 @@ export async function uploadImage(bucketName, imagePath, imageFile) {
 
     return url;
 }
+
+/* user profiles */
+
+export async function updateProfile(profile) {
+    return await client.from('profile').upsert(profile).single();
+}
